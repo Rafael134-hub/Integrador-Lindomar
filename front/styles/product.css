@@ -1,0 +1,266 @@
+/* Estilização dos textos da página de produto */
+.product.text-container.page-title-small {
+    margin-top: 24px;
+}
+
+.product.text-container {
+    margin: 10px 0px;
+}
+
+.product.text-container h4 {
+    font-weight: 400;
+    font-size: 0.875em;
+    padding-bottom: 5px;
+}
+
+
+.product.main-text {
+    font-size:1.2em
+}
+
+/* product page grid */
+.product_images_container{
+    display: flex;
+    column-gap: 32px;
+}
+
+/* Estilização da área de imagens do produto */
+.images_selector{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 120px;
+    align-items: center;
+}
+
+.product_description_container h3.main-text{
+    padding: 20px 0 12px;
+    font-size: 1.2em;
+}
+
+.product_description_container p{
+   line-height: 24px;
+   padding-bottom: 32px;
+}
+
+
+/* Estilização dos itens da área de imagens do produto */
+.images_selector ul{
+   list-style: none;
+}
+
+.images_selector li{
+    padding: 10px 0;
+ }
+
+.product_thumb {
+    width: 100%;
+}
+
+.images_main {
+    flex-basis: 565px;
+    padding-top: 75px;
+}
+
+.images_main img{
+    width: 100%;
+}
+
+.product_description_container {
+    padding-top: 32px;
+}
+
+
+/* Estilização de demais itens de produto da página */
+.product_price_container {
+    padding-bottom: 40px;
+}
+
+.product_price_container h2{
+    font-size: 2.5em;
+    font-weight: 700;
+    padding-bottom: 16px;
+    line-height: 18px;
+
+}
+
+.product_price_container h5{
+    font-size: 0.875em;
+    font-weight: 400;
+    padding-bottom: 10px;
+    margin-bottom: 4rem;
+    line-height: 18px;
+
+}
+
+/* Estilização da área de quantidade */
+.quantity {
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+    width: 16rem;
+}
+
+/* Estilização do input da área de quantidade */
+.quantity input{
+    border:1px solid var(--brand-color);
+    border-radius: 5px;
+    padding: 4px 8px;
+    width: 100%;
+    font-size: 20px;
+    background-color: #f1eee8;
+    border: solid 1px rgb(74, 70, 65);
+}
+
+/* Estilização dos botões de adicionar ou subtrair mais um para a quantidade */
+.bi::before, [class*=" bi-"]::before, [class^=bi-]::before {
+    padding: 6px;
+    font-size: 24px;
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: 900 !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Estilização do botão principal "comprar" da página */
+.shop_btn {
+    padding: 16px 32px;
+    color: white;
+    border-radius: 18px;
+    border: none;
+    text-transform: uppercase;
+    background-color: rgb(163, 137, 98);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    border: solid 2px rgb(139, 112, 71);
+}
+
+/* Animação ao passar o mouse sobre o botão de "comprar" */
+.shop_btn:hover{
+    scale: 1.1;
+}
+
+
+/* Estilização do formulário de calcular frete */
+.grid_col_2 form{
+    display: grid;
+    place-items: center; 
+    background-color: #cebd9b;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 20px;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    border: solid 3px rgb(163, 137, 98);
+}
+
+.grid_col_2 form input{
+    font-size: 17px;
+}
+
+.grid_col_2 form input:hover{
+    background-color: #f5f4ef;
+}
+
+/* Estilização do botão de "ok" do formulário de calcular frete */
+.grid_col_2 form button{
+    padding: 0.5rem 0.9rem 0.5rem 0.9rem;
+    margin-top: 1rem;
+    margin-left: 5.6rem;
+    background-color: #5c4e2c;
+    color: azure;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.1s ease-in-out;
+    border: none;
+    border-radius: 15px;
+}
+
+/* Animação ao passar o mouse sobre o botão de "ok" */
+.grid_col_2 form button:hover{
+    scale: 1.08;
+}
+
+
+/* Estilização da áreas de frete */
+.freight_container {
+    border: 1px solid var(--brand-color);
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.freight_container .container-flex{
+    border-radius: 5px;
+    margin: 8px 0px 5px;
+    column-gap: 5px;
+}
+
+.freight_container form label{
+   font-size: 1.2em;
+   font-weight: 700;
+}
+
+.freight_container form input[type="text"]{
+    border:1px solid var(--brand-color);
+    border-radius: 5px;
+    padding:4px 8px;
+    width: 100%;
+}
+
+/* Estilização dos itens das áreas de frete */
+.freight_container p a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 15px;
+ }
+
+.freight_pricing {
+    background-color: #dbc99c;
+    border: 1px solid var(--brand-color);
+    padding: 16px 16px;
+    border-radius: 5px;
+    justify-content: flex-start;
+    column-gap: 20px;
+    margin-bottom: 16px;
+    border: solid 2.5px rgb(163, 137, 98);
+}
+
+.pricing h3{
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 18px;
+    
+}
+
+/* Estilização de parágrafo de textos das áreas de frete*/
+.pricing p{
+    margin-top: 0.4rem;
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 18px;
+    
+}
+
+/* Cor de fundo das áreas de frete */
+.freight_pricing:nth-child(4){
+    background-color: #dacaaa;
+   
+}
+
+.freight_pricing:nth-child(5){
+    background-color: #cfc6a3;
+   
+}
+
+.freight_pricing:nth-child(6){
+    background-color: #beb092;
+   
+}
+

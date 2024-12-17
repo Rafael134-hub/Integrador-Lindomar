@@ -1,0 +1,191 @@
+/* Estilização do texto principal da página */
+.product.text-container p {
+    font-size: 1em;
+    padding: 10px 0px;
+}
+
+/* Estilização dos cards de produto no carrinho e os elementos dos produtos */
+.cart_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 32px;
+    margin-bottom: 32px;
+    border-top: 1px solid #e6e3e3;
+}
+
+.cart_item_main_img {
+    flex-basis: 180px;
+    border-radius: 5px;
+    margin-top: 2.5rem;
+}
+
+.cart_item_main_img img{
+    width: 120px;
+    object-fit: cover;
+}
+
+.cart_item_info p:first-child {
+    font-size: 0.875em;
+    font-weight: 700;
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+.cart_item_info p:nth-child(2) {
+    font-size: 0.875em;
+    font-weight: 400;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.cart_item_info h3{
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 0;
+    padding-bottom: 8px;
+}
+
+.cart_item_qtd_selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart_item_qtd_selector_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.cart_item_qtd_selector button {
+    background-color: #d8d2c8;
+    padding: 3px 25px;
+    border: none;
+    border-radius: 10px;
+    color: #4d3a12;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.08s ease-in-out;
+    cursor: pointer;
+}
+
+.cart_item_qtd_selector button:hover{
+    scale: 1.08;
+}
+
+.cart_item_qtd_selector_container span{
+    padding: 3px 24px;
+}
+
+/* Estilização da área dos botões de mais e menos */
+.bi::before, [class*=" bi-"]::before, [class^=bi-]::before
+{
+    padding: 3px;
+    
+}
+
+/* Estlização dos botões de "+" e "-" */
+.bi-plus{
+    transition: all 0.16s ease-in-out;
+}
+
+.bi-dash{
+    transition: all 0.05s ease-in-out;
+}
+
+
+/* Animação de aumentar o tamanho do botão ao passar o cursor sobre o botão */
+.bi-plus:hover{
+    scale: 1.3;
+}
+
+.bi-dash:hover{
+    scale: 1.3;
+}
+
+
+#checkout img{
+    height: 100%;
+    width: 15rem;
+}
+
+#checkout p:not(:first-child){
+    font-size: 18px;
+}
+
+#checkout p:first-child{
+    font-size: 20px;
+}
+
+/* Estilização dos subtítulos/ h3 dos produtos */
+.cart_item_info h3{
+    font-size: 25px;
+}
+
+/* Estilização dos itens da área de total */
+.total{
+    padding-bottom: 10px;
+}
+
+.total h3:nth-child(1) {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+.total h3:nth-child(2) {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+.total:nth-child(3){
+    border-top: 1px solid;
+    padding-top: 5px;
+}
+
+/* Estilização dos valores dos subtítulos de subtotal, frete e o total do carrinho */
+#frete{
+    font-size: 20px;
+}
+
+#subtotal{
+    font-size: 20px;
+}
+
+#totalCarrinho{
+    font-size: 20px;
+}
+
+/* Estilização da área de total da página */
+.total_container {
+    align-items: stretch;
+    border: 1px solid var(--brand-color);
+    padding: 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* Estilização do botão de ir para o pagamento */
+.checkout_btn{
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 0px;
+    background-color:rgb(102, 82, 56);
+    color: rgb(255, 254, 251);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.16s ease-in-out;
+}
+
+/* Animação do botão de ir para o pagamento que aumenta o tamanho do botão ao passar o cursor */
+.checkout_btn:hover{
+    scale: 1.08;
+}
+

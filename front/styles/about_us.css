@@ -1,0 +1,135 @@
+/* Estilização da área do título principal da página */
+.sobre_title_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre_title{
+    margin: 4rem 0 5rem;
+    padding-bottom: 1.5rem;
+    max-width: 1000px;
+    background-color: rgb(241, 225, 202);
+    border-radius: 20px;
+}
+
+/* Estilização da área do título principal da página */
+.sobre_title h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Estilização do área da imagem principar da página */
+.sobre_main_image_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+/* Estilização da segunda área da imagem principal da página*/
+.sobre_main_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(223, 205, 184);
+    max-width: 1400px;
+    height: 59rem;
+    padding: 0 4rem 0 4rem;
+    border-radius: 22px;
+    border: solid 4px rgb(3, 3, 3);
+}
+
+/* Estilização da imagem principal da página */
+.sobre_main_image img{
+    max-width: 100%;
+    height: 50rem;
+    margin: 4rem 0 4rem;
+    border: solid 4px rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+/* Estilização da área de textos principal */
+.sobre_text_container{
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(241, 232, 219);
+    padding-bottom: 10rem;
+
+}
+
+/* Estilização da área principal do texto */
+.sobre_text{
+    max-width: 1140px;
+    font-size: 30px;
+    color: rgb(83, 55, 24);
+    padding: 2rem 3rem 0ch 3rem;
+    background-color: rgb(247, 240, 232);
+    border-radius: 18px;
+}
+
+.sobre_text p{
+    margin-bottom: 2rem;
+}
+
+.sobre_text h2{
+    text-align: center;
+    margin-bottom:  3rem;
+}
+
+/* Estilização área de missão visão e valores */
+.missao_visao_valores {
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem; /* Usando gap para controle mais preciso do espaçamento */
+}
+
+.missao_visao_valores img {
+    width: 9rem;
+    height: 9rem;
+    transition: all 0.3s, transform 0.3s ease-out; 
+}
+
+.missao_visao_valores img:hover{
+    scale: 1.15;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo da caixa da mensasgem oculta */
+.tooltip-text {
+    visibility: hidden; /* Inicialmente invisível */
+    font-size: 22px;
+    width: 350px;
+    background-color: #fffcf2;
+    border: solid 3px rgb(0, 0, 0);
+    color: #64500e;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    bottom: -250px; 
+    margin-left: -100px; 
+    transform: translateY(20px); 
+    transition: all 0.3s, transform 0.3s ease-out; 
+}
+
+
+
+/* Mostra a caixa da mensagem oculta quando o mouse passa sobre o elemento */
+.tooltip-container:hover .tooltip-text {
+    visibility: visible; /*Ao passar o mouse, a mensagem fica  visível  */
+    transform: translateY(0); 
+}
+
+/* Área com link clicável que leva para o formulário de contato com a empresa */
+.about_us{
+    margin-top: 20rem;
+}

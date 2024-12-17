@@ -1,0 +1,138 @@
+/* Estilização do título principal das páginas de formulário */
+.title_forms h1{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilização da área de formulários */
+.form_container_box{
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_container{
+    background-color: rgba(253, 247, 239, 0.829);
+    width: 900px;
+    border-radius: 20px;
+    padding: 1rem 0 1rem 0;
+}
+
+.colorfullbox_form{
+    padding: 2rem 2.2rem 2rem 2.2rem;
+    background-color: rgb(227, 216, 187);
+    max-width: 1100px;
+    border-radius: 22px;
+    border: solid 5px rgb(0, 0, 0);
+}
+
+/* Estilização de cabeçalho dos formulários */
+.form_header{
+    flex-wrap: wrap;
+}
+
+.form_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_header img{
+    max-width: 100%;
+    height: 10rem;
+    margin: 1rem 0 1rem;
+}
+
+.form_header h2{
+    margin: 1.5rem;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(65, 60, 54);
+}
+
+/* Estilização da área de inputs */
+.input-box{
+    margin: 2rem 2rem 2rem 2rem;
+}
+
+/* Estilização dos inputs */
+.input-box input, textarea {
+    display: block; 
+    width: 100%;
+    border: 0;
+    border-radius: 22px;
+    font-size: 20px;
+    margin-top: 0.5rem;
+    padding: 0.7rem 0 0.7rem;
+    transition: all 0.1s ease-in-out;
+    border: solid 3px rgb(0, 0, 0);
+}
+
+.input-box input::placeholder, textarea::placeholder{
+    padding-left: 15px; 
+}
+
+/* Animações ao passar o cursor sobre os inputs */
+.input-box input:hover{
+    background-color: #faf7f7;
+    font-size: 20.5px;
+}
+
+.input-box textarea:hover{
+    background-color: #faf7f7;
+    font-size: 20.5px;
+}
+
+.input-box label{
+    font-size: 25px;
+    color: black;
+}
+
+/* Estilização do botão de formulário */
+.form_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0 3rem;
+}
+
+.form_button a {
+    text-decoration: none;
+    color: rgb(43, 40, 35);
+    font-weight: 700;
+}
+
+.form_button button{
+    padding: 1.5rem 10rem 1.5rem 10rem;
+    border-radius: 25px;
+    font-size: 28px;
+    background-color: rgb(231, 212, 186);
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+    border: solid 4px rgb(0, 0, 0);
+}
+
+/* Animação ao passar o cursor sobre o botão */
+.form_button button:hover{
+    scale: 1.05;
+    font-size: 28.4px;
+    background-color: rgb(215, 195, 168);
+}
+
+/* Estilização da área com texto que leva à outra página  */
+.wanna_message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 10rem;
+}
+
+.wanna_message a{
+    color: rgb(61, 48, 9);
+}
+
+.talk_with_us{
+    margin-top: 5rem;
+}

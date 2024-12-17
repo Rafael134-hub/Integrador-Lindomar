@@ -1,0 +1,257 @@
+/*--------------- layout global settings------------------------ */
+
+
+ /*------ global variables------- */
+:root {
+   --font:"Inter", sans-serif;
+   --font-size:16px;
+   --body:#F5F6F6;
+   --bg-color:#FFF;
+   --main-color:#36290d;
+   --text-color:#000;
+}
+
+body {
+    background-color: rgb(255, 250, 243);
+    font-family: var(--font); 
+    font-size: var(--font-size);
+    color: var(--text-color);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/*-------- titles and texts -------- */
+h1 {
+    text-align: center;
+}
+
+.primary-title {
+    font: 700 1.5rem var(--font);
+}
+
+.secondary-title { 
+    font: 700 1.25rem var(--font);
+}
+
+.title { 
+    font: 400 1rem var(--font);
+}
+
+.small-text {
+    font:300 0.875rem var(--font)
+}
+
+
+/*--------- layout settings---------- */
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.grid_col_1 {
+    grid-area: col1;
+    padding:25px
+   
+}
+
+.grid_col_2 {
+    grid-area: col2;
+    padding: 25px;
+}
+
+/* grid_template */
+#product_page, #checkout, #billing{
+    display: grid;
+    column-gap: 32px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "col1 col2";
+
+}
+
+/*---------- components--------------- */
+/* --- main-banner --- */
+
+.section-banner {
+    width: auto;
+    padding-top: 2em;
+}
+
+.section-banner img{
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+/*--- text-containers ---*/
+.text-container {
+    padding: 12px 32px;
+    background-color: rgb(238, 229, 204);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border: solid 3px rgb(175, 157, 134);
+}
+
+.product-page{
+    padding: 12px 32px;
+    background-color: rgb(253, 251, 246);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border: solid 3px rgb(175, 157, 134);
+}
+
+
+/*--- Estilização dos cards de produto--- */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    padding:16px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 200px;
+    /* height: 512px; */
+    border-radius: 15px;
+    box-shadow: 3px 4px 4px 1px rgba(0, 0, 0, 0.04);
+    height: 30rem;
+    border: solid 2px rgb(216, 210, 196);
+    transition: all 0.15s ease-in-out;
+}
+
+/* Animação ao passar o mouse sobre card de produto que aumenta o tamanho do card */
+.product-card:hover{
+    scale: 1.05;
+}
+
+/* Estilização da imagem do card de produto */
+.product-card img {
+    width:14rem;
+    height: 13rem;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Estilização do botão do card de produto */
+.product-card-btn {
+    width: 100%;
+    padding: 5px 20px;
+    background-color: rgb(95, 67, 24);
+    border-radius: 15px;
+    color: var(--bg-color);
+    transition: all 0.15s ease-in-out;
+}
+
+/* Animação ao passar o mouse sobre o botão do card de produto*/
+.product-card-btn:hover{
+    scale: 1.07;
+}
+
+/* Estilização dos textos dos cards de produto */
+.product-card-title , 
+.product-card-reference,
+.product-card-price {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height:1.125em ; 
+}
+
+
+.product-card-title{
+        height: 4.8rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;  
+        font-size: 1.1em;
+        font-weight: 400;
+        line-height:1.125em ; 
+}
+
+.product-card-reference{
+    padding-top: 8px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+
+}
+
+.product-card-price {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.product-card-installment {
+    font-size: 0.85em;
+    margin-bottom: 20px;;
+    font-weight: 300;
+}
+
+
+
+/* 
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+} */
+
+
+/* Estilização do título das páginas de checkout, pagamento etc. */
+.main-text{
+    font-size: 1.8em;
+}
+
+
+.page-title-small {
+    font-size: 2em;
+}
+
+
+/* product container and grid */
+
+@media (max-width: 576px) {
+
+:root {
+
+    --font-size:14px;
+
+}
+
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header .container, main, .footer-info-container, .footer-bg, .rights .container{
+    padding:0 5%;
+}
+
+
+
+.product-card{
+    flex-basis: 160px;
+}
+
+}
+
+/* Estilização do título principal da página */
+.main-title{
+    color: #52350b;
+    font-size: 35px;
+}

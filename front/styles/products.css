@@ -1,0 +1,47 @@
+/* Estilização da área principal de produtos da página contendo todos os produtos da loja */
+.section-product-grid {
+    padding: 1rem 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    justify-items: center;
+    column-gap: 16px;
+    row-gap: 16px;
+    height: 100%;
+    width: 900px;
+    background-color: rgb(243, 230, 210);
+    border-radius: 18px;
+   
+}
+
+/* Estilização da área de filtros de produto da página */
+.products-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 16px;
+    padding-bottom: 50px;
+}
+
+/* Estilização dos itens da área de filtros de produto da página */
+.filter {
+    padding-top: 1.125em;;
+}
+
+.filter h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 0.5em 0;
+}
+
+.filter ul {
+    list-style: none;
+}
+
+.filter li {
+    padding-bottom: 5px;
+}
+
+.filter input[type="checkbox"] {
+    margin-right: 8px;;
+}
+

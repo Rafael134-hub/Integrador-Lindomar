@@ -1,0 +1,47 @@
+/* Estilização da área de exportar pedidos */
+#orders{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "col1 col2";
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 20px;
+}
+
+#order-list{
+    background-color: rgb(225, 215, 190);
+    border-radius: 20px;
+}
+
+.order-card, .order-card ul {
+    list-style: none;
+}
+
+.order-card ul{
+    display: flex;
+    justify-content: space-between;
+}
+.order-card ul:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilização dos textos da área de pedidos */
+#order-list h2{
+    border-top: 3px solid rgb(158, 138, 111);
+    padding-top: 0.8rem;
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+
+#order-list h3{
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+#order-list h4{
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+}

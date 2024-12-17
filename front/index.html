@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <!-- Início da área não visível da página   -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hammies House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script type="module" src="./scripts/home.js" defer></script>
+  
+  <!-- Fim da área não visível da página   -->
+  </head>
+
+  <!-- Início da área visível da página   -->
+  <body>
+
+    <!-- Início do header -->
+    <header>
+
+      <!-- info bar -->
+      <div class="nav-search">
+        <img src="./images/products/logo.png" alt="Logo de Hamster com flor na cabeça" class="logo">
+
+        <!-- Barra de busca -->
+        <div class="search-bar">
+          <i><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbtJREFUSEu11UuoTVEcx/HPJSN5pCRmTE28pga6IROPklC3hJIiiUsMUIrIW4kiqRsZKCaiZICZkJiZGBl4FTFwB5f11zq1ne46e+ucu0b7v9vr//0/f7vPGJ++MfavBJiOvViIeTmIV3iOM/jcNLDRAAO4iCkFJ1+xGfeaQNoBO3EhX7yDS3ic7f4U+Q6szvZG3KqDVAFz8A7jcnlOFy4fTu+P4Cdm41MnSBUQ0W7HbayviewBluMQjjYFfMDM3NTXNYBleIgXWNQUMIwJKaLxKbKRGsA0fMH3DsPw10W1RD8wEZNSD+K505mMb/iIGU0zeIu5WIxnNYAleboeYWlTwDEcSD24izU1gKh/9CF2ZqgpYBbe5z4M4lTh4gnsQ2z2gv/Zg/h2E65XFu08nmZ7FbZhRbbP5n3pOBCjScW6NK5XMLUQXUzO5ZxF9G0/7pcyKYldTMaeLHbzU29+4SWe4FoWuxC+1g6Edu3C73ZQN3K9sk3wzqXR3d1LQPi6iQ0Vp8dxsArpJoPwE5sfkLUVp1HCrS27W0DLz1VsycY/WfQKEBJ/A29wspclqtuz4j+59mLTD3pVoiLvD9ByShl/aCxCAAAAAElFTkSuQmCC" alt="ícone de pesquisa/ lupa"/></i>
+          <input type="text" name="text" id="text" placeholder="O que você precisa hoje?">
+        </div>    
+
+        <!-- Ícones -->
+        <div class="icons-header">
+          <ul>
+            <li><a href="liked.html"><i><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZxJREFUSEu11L1vjWEYx/HPSecmmgpCajHUaOofIF5K01EbU/8CidCkpoYNIQzduyojUukLo9UmBgtB21RIGQnPldxtTh7nPveTU+da7/v6fa/3lj5bq8/6mgImq0Bu4kQK6D3m8bwUYBPAHG5nhGZxvxukBDiPF9hAgFaS2DncwRGcwXoOUgKsJoFpPK6JTGEJy7jYK+AbDlRlGMTPmsgwtvEZx3oFbOIQDuJrBhB/olQdrVSiqPlZRDmeZEoUPbrQK6C9yTEx0ZOBBL2Lw/ttcgR2DSEWwu32u+pLQB/uZ0x3fUdxHTGev/Ayzf+7/7FoJY2u792aHOMZUY/hVJqmdrEtvMHrlM2PTqQcIKZiMTWxSQaxCzNYq3/uBJjAs/TxKW4hjtv3mnNkGMcv3sMnLAKLsd2zOmAIb1PkcWtuNAkf91I5v+BkNXk7u351wFU8wCucbige30InljIO35Vq8xdygDhol0rLkwGPp8P3CJdzgA8YQZSqXvNSQkfxCR9xPAf4kx5KNyoH+8e/V6FSNtkpauzY9GPfM/gL5dBHGcZ57nQAAAAASUVORK5CYII=" id="user" alt="ícone de pessoa/ usuário"/></i></a></li>
+            <li><a href="Food.html"><i><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAehJREFUSEvV1MvLTWEYBfDfF5kiRK6lMFCSgUsuSWJKMVBymbiM/CtGLhlhQlEMzMj9UlIMFCkRBi6lpAwIe329R+ds+5yz++pL3jqdwbvftZ71POtZI8b5jIwzvn9GsBvbsQq/cAfncako3oH81jJa5ANcwLl6R+oKZuAstvZpXYgmYWWf+yvYj4+d+26CCbiNNfiAg7iHH9iAU5heHgbgAG5hYrk/gWkFYyN+5ttugkM4js9Yhre1KufiamnZZryr3c+v2voEU7AXZ+oEj7AC+3B6jO6KqpO4iajoUfC9yE0lb8ZIsBjP8R6z+hHMa2hPW74leFbeB6dHwX2sxp7ipLag3d8dxjFcxrY6wZFqQEfxqfL78oYhDiOcg6eYXP3vLHvRoyD+jooM+gXWl14OA879zGLPRdW7a9VixmWjp75oGUwckGG1JUnl1xHwDDg7kz1qJOhUkwVbWM3jZXlQ93znfcDvYkEBX1da/Ed1v7CL5CiJK16XzKmTdIOn9/F95tdzBqVpYiHZ00TSDf64ioxNJQH+mtewuA7JDSztUpLsibq05WEZ6Jd+ThhGkHdTC0ny6VVJ09nFcVvwdZDN2hB0SJK0UZITEyTSB4I32XRQMVFyEWnHLnxrsyBtFbTBavzm/yf4DTBuXhlUYzevAAAAAElFTkSuQmCC" alt="ícone de coração/ curtidos"/></i></a></li>
+            <li><a href="checkout.html"><i><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWFJREFUSEvN1CFMVmEUxvEfYxg0soHNmbERMJEoBBqBIsPEmAXmdCY3opuMQsCNOaEogUagGEgOAgmCxUKBQWBsBGeAe9i9292377v3xevnOOWG93nP/z3nOef26HL0dDm//wq4zqu5whrm/0V15QoKQJF3DN+bQtq16C0+YBsT3QD04wS9eILjJpBOJm/gRYPEm5iK+50Az/GjAeAIz6oAcXaIIcxgPREWumm8y32s3INZrGIfIwmARzjHg+zeY5zVVfAwF8V3GAc1kJf4jB2MF9q6TV7JIK/wBZGgKnYxmpsbJt9GHSA8CC9+YwCXHQhPs97/yrb/Itf9SQWErnjZG3zsAFjE+9yzubKmroLQxjx/TTA5JDHee3cF9OFnNqrRhqrYyto52SpIqSDx8e1lqYAFvMYSlltSVZ3VTlGRK35+gzjNl6jMqDpLBnzKzf6G2PByVJ0lA/7ah1QP7i/gBq16NxnJzE4xAAAAAElFTkSuQmCC" id="cart" alt="ícone de carrinho"/></i></a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Início da navbar -->
+      <nav>
+        <div class="navbar-container">
+          <div class="navbar">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Produtos</a></li>
+              <li><a href="cadastro.html">Cadastro</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+          </div>
+        </div>  
+      <!-- Fim da navbar -->
+      </nav>
+
+      <div class="container_texto_animado">
+        <div class="texto-animado-wrapper">
+          <div class="texto-animado">
+            <p>Temos os melhores produtos para o seu hamster! Aproveite!!! 🐹🐹🐹</p>
+          </div>
+        </div>
+      </div>
+          
+    <!-- Fim do header -->
+    </header>
+    
+    <!-- Início da área de categorias do site/ página -->
+    <main class="main-content container">
+
+      <!-- Início do título principal da página -->
+      <div class="main-content-title">
+        <h1>Temos diversos produtos! Como:</h1>
+      
+      <!-- Fim do título principal da página -->
+      </div>
+
+      <section class="main-category-area container-flex">
+
+        <div class="main-category-card">
+          <img
+            src="./images/products/product01/Nutropica_img1.webp" 
+            alt="Ração para hamsters Nutrópica"
+            class="category-img"/>
+          <h4>Rações</h4>
+        </div>
+
+        <div class="main-category-card">
+          <img
+            src="./images/products/product11/Terrario1.png"
+            alt="Terrário para hamsters"
+            class="category-img"/>
+          <h4>Terrários</h4>
+        </div>
+
+        <div class="main-category-card">
+          <img
+            src="./images/products/product15/Rodinha1_1.webp"
+            alt="Rodinha de MDF"
+            class="category-img"/>
+          <h4>Rodinhas</h4>
+        </div>
+
+        <div class="main-category-card">
+          <img src="./images/products/product45/Casca_de_pinus1.webp" 
+          alt="Casca de Pinus" 
+          class="category-img"/>
+          <h4>Enriquecimento ambiental</h4>
+        </div>
+      
+      <!-- Fim da área de categorias do site/ página -->
+      </section>
+
+      <!-- Início da área do primeiro banner da página -->
+      <div class="section-banner container">
+        <img
+          src="./images/banners/banner1.png"
+          alt="Banner promocional"
+          class="banner"/>
+      
+      <!-- Fim da área do primeiro banner da página -->
+      </div>
+      
+      <!-- Início do primeiro carrosel de produtos "Novidades" -->
+      <section class="section-product">
+        <h2 class="main-title">Novidades</h2>
+
+        <section id="section-novidades" class="section-product-carrousel">
+          <div class="carrousel">
+            <!-- <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/cord_drill.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/prod01/img1.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/srewdriver_bit_set.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div> -->
+          </div>
+        </section>
+
+        <!-- Botão de voltar do carrosel "Novidades" -->
+        <button class="prev">
+          <i class="bi bi-chevron-double-left"></i>
+        </button>
+
+        <!-- Botão de avançar do carrosel "Novidades" -->
+        <button class="next">
+          <i class="bi bi-chevron-double-right"></i>
+        </button>
+        
+      <!-- Fim do primeiro carrosel de produtos "Novidades" -->
+      </section>
+
+      <!-- Início da área do segundo banner da página -->
+      <div class="section-banner container">
+        <img
+          src="./images/banners/banner2.png"
+          alt="Banner promocional"
+          class="banner"/>
+      
+      <!-- Fim da área do segundo banner da página -->
+      </div>
+
+      <!-- Início do segundo carrosel de produtos "Mais vendidos" -->
+      <section class="section-product">
+        <h2 class="main-title">Mais Vendidos</h2>
+
+        <section id="section-maisvendidos" class="section-product-carrousel">
+          <div class="carrousel">
+           <!-- <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/cord_drill.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/cordless_screwdriver.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/srewdriver_bit_set.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div> -->
+          </div> 
+        </section>
+
+        <!-- Botão de voltar do carrosel "Mais vendidos" -->
+        <button class="prev">
+          <i class="bi bi-chevron-double-left"></i>
+        </button>
+
+        <!-- Botão de avançar do carrosel "Mais vendidos" -->
+        <button class="next">
+          <i class="bi bi-chevron-double-right"></i>
+        </button>
+      
+      <!-- Fim do segundo carrosel de produtos "Mais vendidos" -->
+      </section>
+
+      <!-- Início do terceiro carrosel de produtos "Promoções" -->
+      <section class="section-product">
+        <h2 class="main-title">Promoções</h2>
+
+        <section id="section-promocoes" class="section-product-carrousel">
+          <div class="carrousel">
+            <!-- <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/cord_drill.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/cordless_screwdriver.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/srewdriver_bit_set.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div>
+                <img
+                  src="./images/products/vacuum_cleaner.png"
+                  alt="Furadeira Eletrica"
+                />
+              </div>
+              <div class="product-card-info-container">
+                <h2
+                  class="product-card-title"
+                  title="Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas incluso"
+                >
+                  Parafusadeira e Furadeira de impacto Bosch 12V com kit brocas
+                  incluso
+                </h2>
+                <h4 class="product-card-reference">Cod. 12345678</h4>
+                <h3 class="product-card-price">R$ 499,90</h3>
+                <h4 class="product-card-installment">
+                  10x de R$ 49,90 s/juros
+                </h4>
+              </div>
+              <button class="product-card-btn">COMPRAR</button>
+            </div> -->
+          </div>
+        </section>
+
+        <!-- Botão de voltar do carrosel "Promoções" -->
+        <button class="prev">
+          <i class="bi bi-chevron-double-left"></i>
+        </button>
+
+        <!-- Botão de avançar do carrosel "Promoções" -->
+        <button class="next">
+          <i class="bi bi-chevron-double-right"></i>
+        </button>
+      
+      <!-- Fim do terceiro carrosel de produtos "Promoções" -->
+      </section>
+
+    <!-- Fim da área principal da página -->
+    </main>
+
+    <!-- Início do footer -->
+    <footer>
+
+      <!-- Início da área de cards de informações da loja -->
+      <section class="footer-info-container container">
+        <div class="footer-info-card">
+          <h4>Parcelamento</h4>
+          <h3>Em ate 10 vezes</h3>
+          <h5>
+            Parcelamos sua compra em ate 10x sem juros para todos os cartões de
+            credito.
+          </h5>
+        </div>
+
+        <div class="footer-info-card">
+          <h4>Compre pelo</h4>
+          <h3>Whatsapp</h3>
+          <h5>
+            Para todo territorio nacional. Horario de atendimento sujeito a
+            região
+          </h5>
+          <h3>(19)99999-9999</h3>
+        </div>
+
+        <div class="footer-info-card">
+          <h4>Fale conosco</h4>
+          <h3>Atendimento</h3>
+          <h5>
+            Central de atendimento disponível das 08:00 as 20:00 seg a sexta
+          </h5>
+          <h3>(19)99999-9999</h3>
+        </div>
+        
+      <!-- Fim da área de cards de informações da loja -->
+      </section>
+
+      <!-- Início da parte principal do rodapé -->
+      <div class="footer-bg">
+
+        <!-- Início da área com links de outras informações/ páginas da loja -->
+        <section class="footer-nav container container-flex">
+          <div class="footer-nav-container">
+            <div class="footer-navitem-container">
+              <h3>Institucional</h3>
+              <ul>
+                <li><a href="">Sobre Nós</a></li>
+                <li><a href="">Fale Conosco</a></li>
+                <li><a href="">Politica de troca</a></li>
+                <li><a href="">Politica de privacidade</a></li>
+                <li><a href="">Politica de envio</a></li>
+                <li><a href="adm.html">Página administrativa</a></li>
+              </ul>
+            </div>
+
+          <!-- Fim da área com links de outras informações/ páginas da loja -->
+          </div>
+
+          <!-- Início da área de redes sociais da página -->
+          <div class="footer-social-container">
+            <h3>Siga nossas redes sociais</h3>
+            <h5>Acompanhe as novidades pelas nossas redes sociais</h5>
+            <div class="social-icons">
+              <ul>
+                <li><a href="https://www.facebook.com/PaginaTudoSobreHamsters" target="_blank"><i class="bi bi-facebook" alt="Ícone de Facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/hamstersfofinhos/" target="_blank"><i class="bi bi-instagram" alt="Ícone de Instagram"></i></a></li>
+                <li><a href="https://www.tiktok.com/@pompom_o_hamster_/video/7061958802823744773" target="_blank"> <i class="bi bi-tiktok" alt="Ícone de Tik Tok"></i></a></li>
+              </ul>
+            </div>
+
+          <!-- Fim da área de redes sociais da página -->
+          </div>
+        
+        <!-- Fim da área com links de outras informações/ páginas da loja -->
+        </section>
+
+      <!-- Início da parte principal do rodapé -->
+      </div>
+
+      <!-- Início da área de direitos autorais do site -->
+      <div class="rights">
+        <div class="container">
+          <h5>
+            Hammies House LTDA- CNPJ: 87.654.321/0005-24 - Todos os
+            direitos reservados
+          </h5>
+        </div>
+
+      <!-- Fim da área de direitos autorais do site -->
+      </div>
+
+    <!-- Fim do footer -->
+    </footer>
+
+  <!-- Fim da área visível da página   -->
+  </body>
+
+</html>
